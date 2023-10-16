@@ -154,7 +154,7 @@ textarea {
   height: 0.85em;
   transform: translate3d(-50%, -50%, 0);
   background: transparent;
-  box-shadow: #2cc5d2 0 0 0 1px inset;
+  box-shadow: #0d2022 0 0 0 1px inset;
   content: "";
   display: block;
 }
@@ -162,8 +162,8 @@ textarea {
 .checkbox input[type="checkbox"]:checked + span:before {
   font-size: 16px;
   line-height: 24px;
-  box-shadow: none;
-  color: #2cc5d2;
+  box-shadow: none; 
+  color: #025c64;
   margin-top: -1px;
   font-family: "percolate";
   font-style: normal;
