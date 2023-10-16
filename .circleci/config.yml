@@ -17,20 +17,25 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
+  # 👇 Adds Chromatic as a job
+  storybook-deployment:
+    docker:
+      - image: circleci/node:12
+    working_directory: ~/repo
+    steps:
+      - checkout
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies-
       - run: yarn install
-      # 👇 Runs the Chromatic CLI
+        # 👇 Runs the Chromatic CLI
       - run: yarn chromatic --project-token=${PROJECT_TOKEN}
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
-  # example for a build and deploy workflow
-  build-workflow:
+  say-hello-workflow:
     jobs:
-       - build
-       - deployment
-       - storybook-deployment # 👈 Runs the Chromatic job above
+      - say-hello
+      - storybook-deployment
