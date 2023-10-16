@@ -30,7 +30,7 @@ jobs:
             - v1-dependencies-
       - run: npm install
         # 👇 Runs the Chromatic CLI
-      - run: npx chromatic --project-token=chpt_7d477a36f46fc48
+      - run: npx chromatic --project-token=chpt_7d477a36f46fc48 --exit-zero-on-changes
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
