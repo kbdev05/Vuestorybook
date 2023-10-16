@@ -29,7 +29,7 @@ jobs:
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
   # example for a build and deploy workflow
-  build-and-deploy:
+  build-workflow:
     jobs:
        - build
        - deployment
